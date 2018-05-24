@@ -16,7 +16,7 @@ In your code:
 ```scala
 import com.mdsol.archon_client.{ArchonClient, ArchonResponse}
 
-def registerTopic(topic_name: String, description: String): ArchonResponse {
+def registerTopic(topicName: String, description: String): ArchonResponse {
   ArchonClient.register(topic_name, description)
 }
 
@@ -24,7 +24,7 @@ def publish(someMessage: Json, topicName: TopicName): ArchonResponse {
   ArchonClient.publish(topicName, someMessage)
 }
 
-def subscribe(topic_name: TopicName): ArchonResponse {
+def subscribe(topicName: TopicName): ArchonResponse {
   ArchonClient.subscribe(topicName, notificationEndpoint: URL)
 }
 
@@ -33,7 +33,7 @@ def subscribe(topic_name: TopicName): ArchonResponse {
 To follow
 
 ### Caveats
-No code has yet been written, this is a loose sketch
+Need to replace String for resource uris with a Uri type (i.e. MdsolUri, but a scala equivalent)
 
 ### Contributing
 To follow
